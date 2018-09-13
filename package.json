@@ -1,0 +1,25 @@
+{
+  "name": "proyecto-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmicht/proyecto-api.git"
+  },
+  "author": "Michelle Torres <hola@michelletorres.mx>",
+  "license": "",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1"
+  }
+}
