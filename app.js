@@ -1,6 +1,11 @@
 const express = require('express');
 
+const bodyParser = require('body-parser');
+
 const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
@@ -35,6 +40,23 @@ app.get('/users/:userId', (req, res) => {
   };
 
   res.send(user);
+});
+
+app.post('/users', (req, res) => {
+  console.log(req.body);
+  const json = {
+    response: 'ok',
+    data: {
+      id: 100,
+      name: req.body.name,
+    },
+  };
+
+  res.send(json);
+});
+
+app.put('/users/:userId', (req, res) => {
+  res.send('editado lindo');
 });
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
