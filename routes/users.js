@@ -1,6 +1,6 @@
 const { Router } = require('express');
 
-const bodyParser = require('body-parser');
+const dateMidd = require('../middlewares');
 
 const router = Router();
 
@@ -21,6 +21,7 @@ router.get('/', (req, res) => {
   const json = {
     response: 'ok',
     data: users,
+    data2: req.body,
     total: 2,
   };
 
