@@ -2,21 +2,12 @@ const { Router } = require('express');
 
 const dateMidd = require('../middlewares');
 
+const db = require('../db');
+
 const router = Router();
 
 router.get('/', (req, res) => {
-  const users = [
-    {
-      id: 1,
-      name: 'juan',
-      email: 'juan@correo',
-    },
-    {
-      id: 2,
-      name: 'juan2',
-      email: 'juan2@correo',
-    },
-  ];
+  const users = db.getAll('users');
 
   const json = {
     response: 'ok',
